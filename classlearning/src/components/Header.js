@@ -6,7 +6,6 @@ export default function Header() {
         <div>
             <h1 className="heading">Header</h1>
             <p style={{color: "red", fontStyle: "italic"}}>Contact US</p>
-        </div>
-        
+        </div>        
     )
 }
