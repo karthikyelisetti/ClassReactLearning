@@ -5,7 +5,7 @@ export default function Header() {
     return(
         <div>
             <h1 className="heading">Header</h1>
-            <p style={{color: "red"}}>Contact US</p>
+            <p style={{color: "red", fontStyle: "italic"}}>Contact US</p>
         </div>
         
     )
