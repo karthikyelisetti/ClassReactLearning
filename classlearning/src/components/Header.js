@@ -3,6 +3,10 @@ import './Header.css'
 
 export default function Header() {
     return(
-        <h1 className="heading">Header</h1>
+        <div>
+            <h1 className="heading">Header</h1>
+            <p style={{color: "red"}}>Contact US</p>
+        </div>
+        
     )
 }
