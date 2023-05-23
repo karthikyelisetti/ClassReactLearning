@@ -1,5 +1,7 @@
 function Hello() {
-  return (<>Hello World!</>);
+  return (<>
+    Hello World!
+  </>);
 }
 
 export default Hello;
