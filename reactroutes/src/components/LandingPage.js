@@ -7,6 +7,7 @@ import axios from 'axios';
 // hook responsible for side effects like api calling
 export default function LandingPage() {
     const [counter, setCounter] = useState(0);
+    const [product, setProduct] = useState([]);
     console.log("I am rendering in landing page component");
     // let a = 10;
 
@@ -17,6 +18,7 @@ export default function LandingPage() {
             try {
                 let response = await axios.get("https://dummyjson.com/products");
                 console.log(response.data);
+                setProduct(response.data.products);
             }catch(error) {
                 console.log(error);
             }
@@ -30,6 +32,7 @@ export default function LandingPage() {
     //[]: dependency array
     // case1: dependency array is empty: useeffect runs only single time when the page renders
     // case2: dependency array has some state or props: whwnever the state or props changes, your useeffect will trigger that many times
+    console.log("These are the products",product);
 
     return (
         <div className='header'>
