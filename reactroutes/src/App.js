@@ -1,8 +1,8 @@
 import { Routes,Route } from 'react-router-dom';
 import Contact from './components/Contact';
-import Signup from './signup';
-import Signin from './signin'
-import LandingPage from './LandingPage';
+import Signup from './components/Signup';
+import Signin from './components/Signin';
+import LandingPage from './components/LandingPage';
 
 
 function App() {
