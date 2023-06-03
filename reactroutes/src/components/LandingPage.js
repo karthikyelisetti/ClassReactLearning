@@ -9,7 +9,6 @@ export default function LandingPage() {
     const [counter, setCounter] = useState(0);
     const [product, setProduct] = useState([]);
     console.log("I am rendering in landing page component");
-    // let a = 10;
 
     useEffect(() => {
         console.log("I am getting printed from useeffect body..");
@@ -37,17 +36,17 @@ export default function LandingPage() {
     return (
         <div className='header'>
             {/* In line calling of stateFunction using arrow function */}
-            <button onClick={() => setCounter(counter+1)}>+</button>
-            {counter}
+            {/* <button onClick={() => setCounter(counter+1)}>+</button>
+            {counter} */}
             {/* LandingPage :{a} */}
             {
                 product.length !==0 ? product.map((element) => (
-                    <div className='card'>
-                        <div>image: {element.thumbnail}
-                            <img src={element.thumbnail} />
+                    <div className="card d-flex mt-5" style={{width: '18rem'}}>
+                        <img src={element.thumbnail} className="card-img-top" alt={element.title} />
+                        <div className="card-body">
+                            <h5 className="card-title">{element.title}</h5>
+                            <p className="card-text">{element.brand}</p>
                         </div>
-                        <div>productTitle: {element.title}</div>
-                        <div>productBrand: {element.brand}</div>
                     </div>
 
                 )): <div>No Product Data</div>
