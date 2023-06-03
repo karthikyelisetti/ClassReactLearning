@@ -40,6 +40,18 @@ export default function LandingPage() {
             <button onClick={() => setCounter(counter+1)}>+</button>
             {counter}
             {/* LandingPage :{a} */}
+            {
+                product.length !==0 ? product.map((element) => (
+                    <div className='card'>
+                        <div>image: {element.thumbnail}
+                            <img src={element.thumbnail} />
+                        </div>
+                        <div>productTitle: {element.title}</div>
+                        <div>productBrand: {element.brand}</div>
+                    </div>
+
+                )): <div>No Product Data</div>
+            }
         </div>
     )
 }
