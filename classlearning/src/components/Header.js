@@ -1,8 +1,9 @@
 import React from "react";
 import "./Header.css";
+import Footer from "./Footer";
 
-export default function Header(props) {
-  console.log(props.myname);
+export default function Header({myname, mynumber}) { // directly destructing the components
+  console.log(myname);
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -48,7 +49,11 @@ export default function Header(props) {
           </div>
         </div>
       </nav>
-      My name is {props.myname}
+      {/* My name is {props.myname}
+      My num is {props.mynumber} */}
+      My name is {myname}
+      My num is {mynumber}
+      <Footer myname={myname}></Footer>
     </div>
   );
 }
