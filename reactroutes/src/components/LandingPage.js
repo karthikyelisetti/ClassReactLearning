@@ -11,7 +11,7 @@ export default function LandingPage() {
         console.log("I am getting printed from useeffect body..");
 
         let bdy = document.querySelector(".header")
-    }, [])
+    }, [counter])
     //[]: dependency array
     // case1: dependency array is empty: useeffect runs only single time when the page renders
     // case2: dependency array has some state or props: whwnever the state or props changes, your useeffect will trigger that many times
