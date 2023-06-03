@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Contactus from "./components/Contactus";
 
 function App() {
+  let name = "Herovired";
   const contactdetails = {
     name: "Karthik",
     phone: "9999999999",
@@ -13,7 +14,7 @@ function App() {
   const salutation = ["namaste", "hello", "hola", "bonjour"];
   return (
     <div className="App">
-      <Header></Header>
+      <Header myname={name}></Header>
       <Contactus
         name={contactdetails.name}
         phone={contactdetails.phone}
@@ -25,3 +26,7 @@ function App() {
 }
 
 export default App;
+
+//props: property or value, which we want to pass
+// props can be passed from parent to child not from child to parent
+// Siblings cannot pass props to each other
