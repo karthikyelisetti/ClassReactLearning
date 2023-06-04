@@ -15,8 +15,8 @@ export default function Cards(props) {
         <p className="card-text">{props.description}</p>
       </div>
       <div className="btn-product">
-      <button className="me-3 justify-content-center">Add to cart</button>
-      <button className="me-3 justify-content-center">View details</button>
+      <button className="me-3">Add to cart</button>
+      <button className="me-3">View details</button>
       </div>
     </div>
   );
