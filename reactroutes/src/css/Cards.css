@@ -1,0 +1,17 @@
+.btn-product {
+  margin-left: 10px;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  padding: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  margin-left: 42px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
