@@ -1,31 +1,42 @@
-import React from 'react'
-
-import "../src/Signup"
-
-import {Link} from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
+import "../css/Login.css"
 
 export default function Login() {
   return (
     <div>
-
-        <h2>Login</h2>
+      <main className="form-signin w-100 m-auto">
         <form>
-            <div class="form-group">
-            
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Login Now</button>
-          </form>
+          <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+          <div className="form-floating">
+            <input
+              type="email"
+              className="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div className="form-floating">
+            <input
+              type="password"
+              className="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+
+          <div className="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me" /> Remember me
+            </label>
+          </div>
+          <button className="w-100 btn btn-lg btn-primary" type="submit">
+            Sign in
+          </button>
+        </form>
+      </main>
     </div>
-  )
+  );
 }
