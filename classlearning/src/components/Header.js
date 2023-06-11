@@ -2,8 +2,7 @@ import React from "react";
 import "./Header.css";
 import Footer from "./Footer";
 
-export default function Header({myname, mynumber}) { // directly destructing the components
-  console.log(myname);
+export default function Header({myname, mynumber, mysalutation, myage, copyright}) { // directly destructing the components
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -51,9 +50,9 @@ export default function Header({myname, mynumber}) { // directly destructing the
       </nav>
       {/* My name is {props.myname}
       My num is {props.mynumber} */}
-      My name is {myname}
-      My num is {mynumber}
-      <Footer myname={myname}></Footer>
+      {mysalutation}, My name is {myname}
+      My age is {myage} and num is {mynumber}
+      <Footer copyright={copyright}></Footer>
     </div>
   );
 }

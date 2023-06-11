@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Footer({myname}) {
+export default function Footer({copyright}) {
   return (
-    <div>Inside Footer: {myname}</div>
+    <div>copyright: {copyright}</div>
   )
 }

@@ -3,7 +3,6 @@ import "./App.css";
 import Hello from "./components/Hello";
 import Header from "./components/Header";
 import Contactus from "./components/Contactus";
-import Footer from "./components/Footer";
 
 function App() {
   let name = "Herovired";
@@ -14,10 +13,18 @@ function App() {
     phone: "9999999999",
     email: "karthikyeilsetti.dev@gmail.com",
   };
+  let obj = {
+    name:"hello",
+    age:19,
+    copyright: "@hello"
+  }
+  // name and age should be rendered in header
+  // copyright should come in footer
+
   const salutation = ["namaste", "hello", "hola", "bonjour"];
   return (
     <div className="App">
-      <Header myname={name} mynumber={num}></Header>
+      <Header myname={name} mynumber={num} mysalutation={obj.name} myage={obj.age} copyright={obj.copyright}></Header>
       <Contactus
         name={contactdetails.name}
         phone={contactdetails.phone}
