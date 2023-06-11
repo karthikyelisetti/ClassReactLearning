@@ -1,13 +1,14 @@
 import React from "react";
 import "./Header.css";
-import Footer from "./Footer";
+import Title from "./subcomponent/Title";
 
 // export default function Header({myname, mynumber, mysalutation, myage, copyright}) { // directly destructing the components
-export default function Header({name, setName}) {
+export default function Header({name, setName, showTitlePage, setshowTitlePage}) {
   // destructing the props
 
   function handleClick() {
     setName("HeroVired");
+    setshowTitlePage(false);
   }
   return (
     
@@ -66,6 +67,7 @@ export default function Header({name, setName}) {
         your name is: {name}
         <button onClick={handleClick}>Change Name</button>
       </div>
+      This is the title page: {showTitlePage ? <Title /> : null}
     </div>
   );
 }

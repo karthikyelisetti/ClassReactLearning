@@ -12,6 +12,7 @@ function App() {
   // // hooks: responsible for managing state of our webpage is (useState)
   // // let [stateVariable, stateFunction] = useState (defaultstate/ initial state)
   const [name, setName] = useState('heroVired');
+  const [showTitlePage, setshowTitlePage] = useState(true);
   // const [num, setNum ] = useState(0);
   // // statevariable = this is responsible for storing the state of your component
   // // statefunction = this is responsible for manipulating or changing the statevariable according to events.
@@ -69,8 +70,8 @@ function App() {
         <button onClick={handleClick}>click me...</button>
       </div>       */}
       <div>
-        <Header name={name} setName={setName}></Header>
-        <Footer name={name}></Footer>
+        <Header name={name} setName={setName} showTitlePage={showTitlePage} setshowTitlePage={setshowTitlePage}></Header>
+        {/* <Footer name={name}></Footer> */}
       </div>
     </div>
   );
