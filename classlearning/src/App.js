@@ -3,9 +3,19 @@ import "./App.css";
 import Hello from "./components/Hello";
 import Header from "./components/Header";
 import Contactus from "./components/Contactus";
+import {useState} from 'react';
 
 function App() {
-  let name = "Herovired";
+  // states
+  //initial
+  // hooks: responsible for managing state of our webpage is (useState)
+  // let [stateVariable, stateFunction] = useState (defaultstate/ initial state)
+  const [name, setName] = useState('heroVired');
+  // statevariable = this is responsible for storing the state of your component
+  // statefunction = this is responsible for manipulating or changing the statevariable according to events.
+  console.log("this is name", name);
+  console.log("this is statefunction:", setName)
+  // let name = "Herovired";
   let num = 10;
   //how to pass multiple props
   const contactdetails = {
@@ -22,6 +32,13 @@ function App() {
   // copyright should come in footer
 
   const salutation = ["namaste", "hello", "hola", "bonjour"];
+
+  function handleClick() {
+    console.log("I am clicking the button now");
+    // Inorder to change the state of our name, we will use statefunction
+    setName('hero');
+  }
+
   return (
     <div className="App">
       <Header myname={name} mynumber={num} mysalutation={obj.name} myage={obj.age} copyright={obj.copyright}></Header>
@@ -31,6 +48,7 @@ function App() {
         email={contactdetails.email}
         salutation={salutation}
       ></Contactus>
+      <button onClick={handleClick}>click me...</button>
     </div>
   );
 }
