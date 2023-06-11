@@ -11,12 +11,12 @@ function App() {
   // hooks: responsible for managing state of our webpage is (useState)
   // let [stateVariable, stateFunction] = useState (defaultstate/ initial state)
   const [name, setName] = useState('heroVired');
+  const [num, setNum ] = useState(0);
   // statevariable = this is responsible for storing the state of your component
   // statefunction = this is responsible for manipulating or changing the statevariable according to events.
   console.log("this is name", name);
   console.log("this is statefunction:", setName)
   // let name = "Herovired";
-  let num = 10;
   //how to pass multiple props
   const contactdetails = {
     name: "Karthik",
@@ -39,6 +39,16 @@ function App() {
     setName('hero');
   }
 
+  function increment() {
+    setNum(num+1);
+    console.log("this is the num after increment", num);
+  }
+
+  function decrement() {
+    console.log("this is the num before decrement", num);
+    setNum(num-1);
+  }
+
   return (
     <div className="App">
       <Header myname={name} mynumber={num} mysalutation={obj.name} myage={obj.age} copyright={obj.copyright}></Header>
@@ -48,7 +58,15 @@ function App() {
         email={contactdetails.email}
         salutation={salutation}
       ></Contactus>
-      <button onClick={handleClick}>click me...</button>
+      <div>
+        This is my counter {num}
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+      </div>
+      <div>
+        My organization name is {name}
+        <button onClick={handleClick}>click me...</button>
+      </div>      
     </div>
   );
 }
