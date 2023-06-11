@@ -8,7 +8,7 @@ function signup() {
       <main className="form-signin w-100 m-auto">
         <form>
           <h1 className="h3 mb-3 fw-normal">Registration</h1>
-          <div className="form-floating">
+          <div className="form-floating mt-4">
             <input
               type="email"
               className="form-control"
@@ -26,22 +26,13 @@ function signup() {
             />
             <label for="floatingPassword">Password</label>
           </div>
-
-          <div className="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me" /> Remember me
-            </label>
-          </div>
-          <button className="w-100 btn btn-lg btn-primary" type="submit">
-            Sign in
+          <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">
+            SIGN UP
           </button>
+          <p className="mt-3">
+            Already have account <Link to="/login">Login here</Link>
+          </p>
         </form>
-        <p>
-          Already have account:
-          <Link to="/login">
-            <a>Login here</a>
-          </Link>
-        </p>
       </main>
     </div>
   );
