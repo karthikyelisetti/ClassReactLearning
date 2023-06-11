@@ -2,10 +2,17 @@ import React from "react";
 import "./Header.css";
 import Footer from "./Footer";
 
-export default function Header({myname, mynumber, mysalutation, myage, copyright}) { // directly destructing the components
+// export default function Header({myname, mynumber, mysalutation, myage, copyright}) { // directly destructing the components
+export default function Header({name, setName}) {
+  // destructing the props
+
+  function handleClick() {
+    setName("HeroVired");
+  }
   return (
+    
     <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      {/* <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             Navbar
@@ -47,12 +54,18 @@ export default function Header({myname, mynumber, mysalutation, myage, copyright
             </form>
           </div>
         </div>
-      </nav>
+      </nav> */}
       {/* My name is {props.myname}
       My num is {props.mynumber} */}
-      {mysalutation}, My name is {myname}
-      My age is {myage} and num is {mynumber}
-      <Footer copyright={copyright}></Footer>
+      {/* {mysalutation}, My name is {myname}
+      My age is {myage} and num is {mynumber} */}
+      {/* <Footer copyright={copyright}></Footer> */}
+
+      This is header: Welcome to react
+      <div>
+        your name is: {name}
+        <button onClick={handleClick}>Change Name</button>
+      </div>
     </div>
   );
 }

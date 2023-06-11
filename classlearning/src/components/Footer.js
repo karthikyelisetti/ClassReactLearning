@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Footer({copyright}) {
+export default function Footer({name}) {
   return (
-    <div>copyright: {copyright}</div>
+    <div>you name is: {name}</div>
   )
 }
