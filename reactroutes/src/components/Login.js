@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Login.css";
 
-export default function Login() {
+export default function Login({setCookie}) {
+  function handleChange(e) {
+    console.log(e);
+    setCookie("name",e.target.value, {path: '/'});
+  }
   return (
     <div>
       <main className="form-signin w-100 m-auto">
@@ -14,6 +18,7 @@ export default function Login() {
               className="form-control"
               id="floatingInput"
               placeholder="name@example.com"
+              onChange={handleChange}
             />
             <label for="floatingInput">Email address</label>
           </div>
