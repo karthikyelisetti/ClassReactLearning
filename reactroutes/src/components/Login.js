@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Login.css";
 
-export default function Login({setCookie}) {
+export default function Login({setCookie, cookie}) {
+  console.log(cookie);
   function handleChange(e) {
     console.log(e);
     setCookie("name",e.target.value, {path: '/'});
@@ -11,7 +12,7 @@ export default function Login({setCookie}) {
     <div>
       <main className="form-signin w-100 m-auto">
         <form>
-          <h1 className="h3 mb-3 fw-normal">Please Sign In</h1>
+          <h1 className="h3 mb-3 fw-normal">Please Sign In {cookie.name}</h1>
           <div className="form-floating mt-4">
             <input
               type="email"

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import { useCookies } from "react-cookie";
+import Product from "./components/Product";
 
 function App() {
   const [cookie, setCookie] = useCookies('');
@@ -12,8 +13,9 @@ function App() {
           <Route path="/" element={<Signup />} />
           <Route
             path="/login"
-            element={<Login setCookie={setCookie} />}
+            element={<Login setCookie={setCookie} cookie={cookie}/>}
           />
+          <Route path="/pro/:userid" element={<Product/>} />
         </Routes>
       </div>
   );
