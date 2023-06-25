@@ -7,6 +7,7 @@ import {useState} from 'react';
 import Footer from "./components/Footer";
 import Profile from "./components/Profile";
 import All from './context/Allcontext';
+import LearnUseref from "./components/LearnUseref";
 
 function App() {
   // states
@@ -87,6 +88,7 @@ function App() {
         Details comming from Profile <br></br>
         <Profile></Profile>
       </All.Provider>       */}
+      <LearnUseref></LearnUseref>
     </div>
   );
 }
